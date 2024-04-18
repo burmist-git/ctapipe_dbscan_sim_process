@@ -23,7 +23,7 @@ def main():
                         default="gamma")
     parser.add_argument('--config', '-c',
                         help='ctapipe config file',
-                        default='/users/lburmist/ctapipe_dev/DBscan_sim_process/configs/ctapipe_standard_sipm_config.json')
+                        default='/users/lburmist/ctapipe_dev/ctapipe_dbscan_sim_process/configs/ctapipe_standard_sipm_config.json')
     parser.add_argument('--output_dir', '-o',
                         help='output directory',
                         default="./")
@@ -53,7 +53,7 @@ def main():
              "--no-write-images",
              "--write-parameters",
              "--no-write-showers",
-             f"--DataWriter.write_r0_waveforms=True",
+             f"--DataWriter.write_raw_waveforms=True",
              #f"--DataWriter.write_r1_waveforms=True"
             ]
         sp.run(cmd)
