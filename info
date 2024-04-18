@@ -1,0 +1,9 @@
+update conda
+git@github.com:cta-observatory/ctapipe.git
+
+pip install -e .
+ctapipe-info 
+ctapipe-info --datamodel
+
+python run_reduction.py -i /scratch/snx3000/lburmist/simtel_data/gamma/data/ -o /users/lburmist/ctapipe_dev/DBscan_sim_process -p "*98*"
+python run_reduction.py -i /scratch/snx3000/lburmist/simtel_data/gamma/data/ -o /scratch/snx3000/lburmist/ctapipe_data/gamma/ --type gamma

@@ -1,0 +1,5 @@
+*~
+slurm-*.out
+ctapipe-process.provenance.log
+core
+

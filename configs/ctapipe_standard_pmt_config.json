@@ -1,0 +1,48 @@
+{
+    "DataWriter": {
+        "Contact": {
+            "name": "Leonid-Burm",
+            "email": "leonid.burmistrov@unige.ch",
+            "organization": "UniGe"
+        },
+        "overwrite": true,
+        "write_images": false,
+        "write_parameters": true,
+        "write_showers": false,
+        "transform_image": false,
+        "transform_peak_time": true
+    },
+    "CameraCalibrator": {
+        "image_extractor_type": "LocalPeakWindowSum"
+    },
+    "ImageProcessor": {
+        "image_cleaner_type": "TailcutsImageCleaner",
+        "TailcutsImageCleaner": {
+            "picture_threshold_pe": [
+                ["type", "*", 8.0]
+            ],
+            "boundary_threshold_pe": [
+                ["type", "*", 4]
+            ],
+            "min_picture_neighbors": [["type", "*", 2]]
+        },
+        "ImageQualityQuery": {
+            "quality_criteria": [
+                ["enough_pixels", "np.count_nonzero(image) > 2"],
+                ["enough_charge", "image.sum() > 50"]
+            ]
+        }
+    },
+    "ShowerProcessor": {
+        "reconstructor_types": ["HillasReconstructor"],
+        "HillasReconstructor": {
+            "StereoQualityQuery": {
+                "quality_criteria": [
+                    ["enough intensity", "parameters.hillas.intensity > 50"],
+                    ["Positive width", "parameters.hillas.width.value > 0"],
+                    ["enough pixels", "parameters.morphology.n_pixels > 3"]
+                ]
+            }
+        }
+    }
+}
