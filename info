@@ -9,3 +9,6 @@ ctapipe-info --datamodel
 
 python run_reduction.py -i /scratch/snx3000/lburmist/simtel_data/gamma/data/ -o /users/lburmist/ctapipe_dev/DBscan_sim_process -p "*98*"
 python run_reduction.py -i /scratch/snx3000/lburmist/simtel_data/gamma/data/ -o /scratch/snx3000/lburmist/ctapipe_data/gamma/ --type gamma
+
+
+https://ctapipe.readthedocs.io/en/latest/auto_examples/tutorials/tableloader_and_eventsources.html#sphx-glr-auto-examples-tutorials-tableloader-and-eventsources-py

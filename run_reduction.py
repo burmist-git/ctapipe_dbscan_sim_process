@@ -36,7 +36,7 @@ def main():
     #corsika_run5.simtel.gz
     for file in files:
         print(f"Inputfile: '{file}'")
-        output_file = f"{args.output_dir}/{file.split('/')[-1].replace('corsika', f'{args.type}').replace('simtel.gz', 'r0.dl1b.h5')}"
+        output_file = f"{args.output_dir}/{file.split('/')[-1].replace('corsika', f'{args.type}').replace('simtel.gz', 'r0.dl1.h5')}"
         print(f"Outputfile: '{output_file}'")
         cmd = [
              "sbatch",
@@ -50,7 +50,8 @@ def main():
              f"--input={file}",
              f"--output={output_file}",
              f"--config={args.config}",
-             "--no-write-images",
+             #"--no-write-images",
+             "--write-images",
              "--write-parameters",
              "--no-write-showers",
              f"--DataWriter.write_raw_waveforms=True",
