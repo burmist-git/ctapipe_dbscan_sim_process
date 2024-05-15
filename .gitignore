@@ -2,4 +2,7 @@
 slurm-*.out
 ctapipe-process.provenance.log
 core
-
+.ipynb_checkpoints/
+Untitled.ipynb
+gamma_tmp/
+hhhh

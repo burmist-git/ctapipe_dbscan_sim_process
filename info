@@ -12,3 +12,5 @@ python run_reduction.py -i /scratch/snx3000/lburmist/simtel_data/gamma/data/ -o 
 
 
 https://ctapipe.readthedocs.io/en/latest/auto_examples/tutorials/tableloader_and_eventsources.html#sphx-glr-auto-examples-tutorials-tableloader-and-eventsources-py
+
+ctapipe-process --overwrite --input=/home/burmist/home2/work/CTA/scratch/simtel_data/gamma/data/corsika_run1.simtel.gz --output=./gamma_tmp/gamma_run1.r0.dl1.h5 --config=./configs/ctapipe_standard_sipm_config.json --write-images --write-parameters --no-write-showers --DataWriter.write_raw_waveforms=True
