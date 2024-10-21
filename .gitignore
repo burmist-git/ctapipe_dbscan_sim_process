@@ -6,3 +6,7 @@ core
 Untitled.ipynb
 gamma_tmp/
 hhhh
+greasy_job/
+run_ctapipe_process.sh
+run_greasy_sbatch.sh
+test_test.sh

@@ -6,7 +6,8 @@ import tables
 #from ctapipe.io import EventSource
 
 def main():
-    open_file = tables.open_file("./gamma_tmp/gamma_run1.r0.dl1.h5", mode="r")
+    #open_file = tables.open_file("NSB386MHz_run1.r0.dl1.h5", mode="r")
+    open_file = tables.open_file("/store/cta/cta04/lburmist/ctapipe_data/gamma/gamma_run1.r0.dl1.h5", mode="r")
     #help(tables)
     #print(open_file.root.dl1.event.subarray.trigger[0])
     #print(len(open_file.root.r0.event.telescope.tel_001))

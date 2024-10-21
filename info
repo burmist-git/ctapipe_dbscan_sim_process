@@ -1,16 +1,45 @@
 update conda
 git@github.com:cta-observatory/ctapipe.git
 
-pip install -e .
-pip install ctapipe==0.19.3
-ctapipe-info 
-ctapipe-info --datamodel
-
+#old before 05.07.2024
+#old before 05.07.2024
+#old before 05.07.2024
+#pip install -e .
+#pip install ctapipe==0.19.3
+#pip install ctapipe==0.22.0 (new one)
+#ctapipe-info 
+#ctapipe-info --datamodel
 
 python run_reduction.py -i /scratch/snx3000/lburmist/simtel_data/gamma/data/ -o /users/lburmist/ctapipe_dev/DBscan_sim_process -p "*98*"
 python run_reduction.py -i /scratch/snx3000/lburmist/simtel_data/gamma/data/ -o /scratch/snx3000/lburmist/ctapipe_data/gamma/ --type gamma
 
-
 https://ctapipe.readthedocs.io/en/latest/auto_examples/tutorials/tableloader_and_eventsources.html#sphx-glr-auto-examples-tutorials-tableloader-and-eventsources-py
 
-ctapipe-process --overwrite --input=/home/burmist/home2/work/CTA/scratch/simtel_data/gamma/data/corsika_run1.simtel.gz --output=./gamma_tmp/gamma_run1.r0.dl1.h5 --config=./configs/ctapipe_standard_sipm_config.json --write-images --write-parameters --no-write-showers --DataWriter.write_raw_waveforms=True
+ctapipe-process --overwrite
+--input=/home/burmist/home2/work/CTA/scratch/simtel_data/gamma/data/corsika_run1.simtel.gz
+--output=./gamma_tmp/gamma_run1.r0.dl1.h5
+--config=./configs/ctapipe_standard_sipm_config.json --write-images
+--write-parameters --no-write-showers --DataWriter.write_raw_waveforms=True
+
+ (new one)
+ctapipe-process --overwrite
+--input=/home/burmist/home2/work/CTA/scratch/simtel_data/gamma/data/corsika_run1.simtel.gz
+--output=./gamma_tmp/gamma_run1.r1.dl1.h5
+--config=./configs/ctapipe_standard_sipm_config.json --write-images
+--write-parameters --no-write-showers --DataWriter.write_waveforms=True
+
+
+
+# after 05.07.2024
+
+source setup.sh --conda
+which conda
+conda env list
+conda activate cta-dev
+
+pip install -e .
+pip install ctapipe==0.21.2
+ctapipe-info 
+ctapipe-info --datamodel
+
+ctapipe-process --overwrite --input=/scratch/snx3000/lburmist/simtel_data/NSB386MHz/data/corsika_run1.simtel.gz --output=/scratch/snx3000/lburmist/ctapipe_data/NSB386MHz/NSB386MHz_run1.r0.dl1.h5 --config=/users/lburmist/ctapipe_dev/ctapipe_dbscan_sim_process/configs/ctapipe_standard_sipm_config.json --write-images --write-parameters --no-write-showers --DataWriter.write_r0_waveforms=True
