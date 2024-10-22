@@ -75,15 +75,15 @@ else
 		rm -rf $outJOBfileList
 		echo "#!/bin/bash -l" >> $outJOBfile
 		echo "#SBATCH --job-name=simtel" >> $outJOBfile
-		echo "#SBATCH --output=/scratch/snx3000/lburmist/simtel_data/job_outlog/simtel.%j.out" >> $outJOBfile
-		echo "#SBATCH --error=/scratch/snx3000/lburmist/simtel_data/job_error/simtel.%j.err" >> $outJOBfile
+		echo "#SBATCH --output=/scratch/snx3000/lburmist/ctapipe_data/job_outlog/simtel.%j.out" >> $outJOBfile
+		echo "#SBATCH --error=/scratch/snx3000/lburmist/ctapipe_data/job_error/simtel.%j.err" >> $outJOBfile
 		echo "#SBATCH --account=cta04" >> $outJOBfile
 		echo "#SBATCH --time=24:00:00" >> $outJOBfile
 		echo "#SBATCH --nodes=1" >> $outJOBfile
 		echo "#SBATCH --cpus-per-task=1" >> $outJOBfile
 		echo "#SBATCH --partition=normal" >> $outJOBfile
 		echo "#SBATCH --constraint=mc" >> $outJOBfile
-		echo "#SBATCH --mem=120GB" >> $outJOBfile
+		#echo "#SBATCH --mem=120GB" >> $outJOBfile
 		echo " " >> $outJOBfile
 		echo "module load singularity" >> $outJOBfile
 		echo "module load daint-mc" >> $outJOBfile
@@ -122,12 +122,41 @@ else
 			output_dir=$(dirname $output)		  
 			mkdir -p $output_dir
 			#
-			cmd="singularity run -B /scratch/snx3000/lburmist/:/scratch/snx3000/lburmist/ $siffile ctapipe-process --overwrite --input=$input --output=$output --config=$config --write-images --write-parameters --no-write-showers --DataWriter.write_r1_waveforms=True --DataWriter.write_index_tables=True --DataWriter.transform_waveform=True"
+			#
+			cmd="singularity run -B /tmp/:/tmp2/ -B /scratch/snx3000/lburmist/:/scratch/snx3000/lburmist/ $siffile ctapipe-process --overwrite --input=$input --output=/tmp2/"$particleName"_run$fileID.r1.dl1.h5 --config=$config --max-events=1000 --write-images --write-parameters --no-write-showers --DataWriter.write_r1_waveforms=True --DataWriter.write_index_tables=True --DataWriter.transform_waveform=True"
+			echo "$cmd" >> $outJOBfileList
+			#cmd="[# 1 #] mv /tmp/"$particleName"_run$fileID.r1.dl1.h5 $output"
+			#echo "$cmd" >> $outJOBfileList
+			#
+			#
+			#cmd="singularity run -B /tmp/:/tmp2/ -B /scratch/snx3000/lburmist/:/scratch/snx3000/lburmist/ /scratch/snx3000/lburmist/singularity/21.10.2024/ctapipe.sif hostname 2>&1 > /tmp/tt.log"
+			#echo "$cmd" >> $outJOBfileList
+			#cmd="[# 1 #] mv /tmp/tt.log /scratch/snx3000/lburmist/."
+			#echo "$cmd" >> $outJOBfileList
+		    fi
+		    #
+		    ((fileID=fileID+1))
+		done
+		###
+		###
+		###
+		fileID=1
+		for jobIT in $(seq 1 $nJOB_per_node)
+		do
+		    #
+		    output="/scratch/snx3000/lburmist/ctapipe_data/$particletype/data/"$particleName"_run$fileID.r1.dl1.h5"
+		    #
+		    if [ -f "$input" ]; then
+			#
+			cmd="[# $fileID #] mv /tmp/"$particleName"_run$fileID.r1.dl1.h5 $output"
 			echo "$cmd" >> $outJOBfileList
 		    fi
 		    #
 		    ((fileID=fileID+1))
 		done
+		###
+		###
+		###
 	    done
 	else
 	    printHelp   
