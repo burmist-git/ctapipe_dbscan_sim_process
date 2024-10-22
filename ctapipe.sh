@@ -36,9 +36,10 @@ else
 	singularity run $out_sif_file ls
 	singularity run $out_sif_file ls /ctapipe_dbscan_sim_process/
 	singularity run $out_sif_file pwd
-	singularity run $out_sif_file ctapipe-process --help	
+	singularity run $out_sif_file ctapipe-process --help
 	singularity run $out_sif_file ctapipe-info
-	singularity run $out_sif_file ctapipe-info --datamodel	
+	singularity run $out_sif_file ctapipe-info --datamodel
+	echo "singularity run $out_sif_file ctapipe-process --help-all"
     elif [ "$1" = "-h" ]; then
         printHelp
     else

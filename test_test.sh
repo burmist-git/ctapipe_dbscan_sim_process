@@ -51,7 +51,9 @@ else
 		    --write-images \
 		    --write-parameters \
 		    --no-write-showers \
-		    --DataWriter.write_r1_waveforms=True
+		    --DataWriter.write_r1_waveforms=True \
+		    --DataWriter.write_index_tables=True \
+	            --DataWriter.transform_waveform=True
     elif [ "$1" = "-h" ]; then
         printHelp
     else
