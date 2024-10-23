@@ -8,6 +8,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --partition=normal
 #SBATCH --constraint=mc
+#SBATCH --mem=120GB
 
 #module load singularity
 #module load daint-mc
