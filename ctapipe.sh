@@ -40,6 +40,8 @@ else
 	singularity run $out_sif_file ctapipe-info
 	singularity run $out_sif_file ctapipe-info --datamodel
 	echo "singularity run $out_sif_file ctapipe-process --help-all"
+	#
+	singularity run $out_sif_file ls /DBscan_on_simtel_data/
     elif [ "$1" = "-h" ]; then
         printHelp
     else
