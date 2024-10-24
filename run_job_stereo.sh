@@ -60,15 +60,18 @@ else
 	    fileID=$3
 	    #
 	    input="/scratch/snx3000/lburmist/simtel_data/$particletype/data/corsika_run$fileID.simtel.gz"
-	    output="/scratch/snx3000/lburmist/ctapipe_data/$particletype/data/"$particleName"_run$fileID.r1.dl1.h5"
+	    output="/scratch/snx3000/lburmist/ctapipe_data/$particletype/data/"$particleName"_run$fileID.dl1.h5"
 	    config="/ctapipe_dbscan_sim_process/configs/ctapipe_standard_sipm_config.json"
 	    echo "$input"
 	    echo "$output"
-	    # --max-events=10
+	    #--max-events=10
+	    #--DataWriter.write_r1_waveforms=True
+	    #--DataWriter.transform_waveform=True
 	    if [ -f "$input" ]; then
 		output_dir=$(dirname $output)		  
 		mkdir -p $output_dir
-		cmd="singularity run -B /scratch/snx3000/lburmist/:/scratch/snx3000/lburmist/ $siffile ctapipe-process --overwrite --input=$input --output=$output --config=$config --write-images --write-parameters --no-write-showers --DataWriter.write_r1_waveforms=True --DataWriter.write_index_tables=True --DataWriter.transform_waveform=True"
+		cmd="singularity run -B /scratch/snx3000/lburmist/:/scratch/snx3000/lburmist/ $siffile ctapipe-process --overwrite --input=$input --output=$output --config=$config --write-images --write-parameters --no-write-showers --DataWriter.write_index_tables=True"
+		#echo "$cmd"
 		$cmd
 	    fi
 	else

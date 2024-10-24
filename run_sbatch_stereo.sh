@@ -1,7 +1,8 @@
 #!/bin/sh
 
 #n_jobs=71
-n_jobs=10
+n_jobs_start=11
+n_jobs_stop=71
 username_whoami=$(whoami)
 
 function printHelp {
@@ -20,8 +21,10 @@ else
     if [ "$1" = "-d" ]; then
         if [ $# -eq 2 ]; then
 	    particletype="$2"
-            for i in $(seq 1 $n_jobs); do
+            for i in $(seq $n_jobs_start $n_jobs_stop); do
+		#echo "$i"
 		sbatch run_job_stereo.sh -d $particletype $i
+		#source run_job_stereo.sh -d $particletype $i
             done
 	fi
     elif [ "$1" = "-info" ]; then
@@ -37,4 +40,3 @@ else
         printHelp
     fi
 fi
-
