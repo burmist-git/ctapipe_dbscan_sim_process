@@ -3,7 +3,7 @@
 #SBATCH --output=/scratch/snx3000/lburmist/ctapipe_data/job_outlog/ctapipe.%j.out
 #SBATCH --error=/scratch/snx3000/lburmist/ctapipe_data/job_error/ctapipe.%j.err
 #SBATCH --account=cta03
-#SBATCH --time=24:00:00
+#SBATCH --time=2:00:00
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
 #SBATCH --partition=normal
