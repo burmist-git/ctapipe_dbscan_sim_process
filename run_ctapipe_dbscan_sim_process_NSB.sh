@@ -13,7 +13,7 @@ function run_ctapipe_process_NSB {
     NSBDIR=$3
     #
     input="../../scratch/simtel_data/NSB/$NSBDIR/$particle_type/data/$process_file_prefix.simtel.gz"
-    output="../../scratch/ctapipe_data/gamma_diffuse/NSB/$NSBDIR/$particle_type/data/$process_file_prefix.dl1.h5"
+    output="../../scratch/ctapipe_data/NSB/$NSBDIR/$particle_type/data/$process_file_prefix.dl1.h5"
     config="./configs/ctapipe_standard_sipm_config.json"
     #
     echo "$input"
