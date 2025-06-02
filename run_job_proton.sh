@@ -35,7 +35,7 @@ else
             simtelIn=$dataOIdir_sim_telarray_Preff"/corsika_run"$jobID".simtel.gz"
             dl1Out=$dataOIdir_ctapipe_Preff"/corsika_run"$jobID".r1.dl1.h5"
             #
-            echo "sif_file                     = $sif_file"
+	    echo "sif_file                     = $sif_file"
             echo "scratchDir                   = $scratchDir"
             echo "dataOIdir_sim_telarray_Preff = $dataOIdir_sim_telarray_Preff"
             echo "dataOIdir_ctapipe_Preff      = $dataOIdir_ctapipe_Preff"
