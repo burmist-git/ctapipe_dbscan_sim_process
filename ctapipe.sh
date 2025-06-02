@@ -6,9 +6,10 @@ out_log_file="ctapipe.log"
 
 function printHelp {
     echo " --> ERROR in input arguments "
-    echo " [0] -d  : build apptainer (singularity) no modules need to be loaded"
-    echo " [0] -t  : test sif file"
-    echo " [0] -h  : print help"
+    echo " [0] -d         : build apptainer (singularity) no modules need to be loaded"
+    echo " [0] -t         : test sif file"
+    echo " [0] --t_dbscan : test dbscan trg"
+    echo " [0] -h         : print help"
 }
 
 if [ $# -eq 0 ] 
@@ -39,9 +40,13 @@ else
 	singularity run $out_sif_file ctapipe-process --help
 	singularity run $out_sif_file ctapipe-info
 	singularity run $out_sif_file ctapipe-info --datamodel
+	singularity run $out_sif_file ctapipe-info --version
 	echo "singularity run $out_sif_file ctapipe-process --help-all"
 	#
 	singularity run $out_sif_file ls /DBscan_on_simtel_data/
+    elif [ "$1" = "--t_dbscan" ]; then
+	singularity run $out_sif_file ls /DBscan_on_simtel_data/
+	singularity run $out_sif_file python3 /DBscan_on_simtel_data/DBscan_on_simtel_data_stereo.py
     elif [ "$1" = "-h" ]; then
         printHelp
     else

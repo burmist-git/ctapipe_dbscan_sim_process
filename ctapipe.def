@@ -9,7 +9,10 @@ From: ubuntu:22.04
     touch $HOME/.ssh/known_hosts
     ssh-keyscan github.com >> $HOME/.ssh/known_hosts
     cd /
-    pip install ctapipe==0.22.0
+    pip install ctapipe==0.25.1
+    pip install eventio
+    pip install pandas
+    pip install	matplotlib
     cd /
     git clone git@github.com:burmist-git/ctapipe_dbscan_sim_process.git
     cd /
