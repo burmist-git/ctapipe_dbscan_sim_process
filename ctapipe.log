@@ -1,22 +1,22 @@
 Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
 Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
-Get:3 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
-Get:4 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4410 kB]
-Get:5 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1246 kB]
-Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2953 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Get:8 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
-Get:9 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
-Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
-Get:11 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
-Get:12 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
-Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
-Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3264 kB]
-Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
-Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4564 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2953 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1246 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4410 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4564 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3264 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
 Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
 Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
-Fetched 38.6 MB in 3s (13.7 MB/s)
+Fetched 38.6 MB in 2s (21.0 MB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -245,7 +245,7 @@ Get:146 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-dev am
 Get:147 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-setuptools all 59.6.0-1.2ubuntu0.22.04.3 [340 kB]
 Get:148 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-wheel all 0.37.1-2ubuntu0.22.04.1 [32.0 kB]
 Get:149 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-pip all 22.0.2+dfsg-1ubuntu0.5 [1306 kB]
-Fetched 110 MB in 6s (19.2 MB/s)
+Fetched 110 MB in 4s (24.8 MB/s)
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4393 files and directories currently installed.)
 Preparing to unpack .../libc6_2.35-0ubuntu3.10_amd64.deb ...
 debconf: unable to initialize frontend: Dialog
@@ -904,144 +904,144 @@ Running hooks in /etc/ca-certificates/update.d...
 done.
 Collecting ctapipe==0.25.1
   Downloading ctapipe-0.25.1-py3-none-any.whl (2.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 30.4 MB/s eta 0:00:00
-Collecting joblib
-  Downloading joblib-1.5.1-py3-none-any.whl (307 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 307.7/307.7 KB 148.3 MB/s eta 0:00:00
-Collecting numba>=0.57
-  Downloading numba-0.61.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.8 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 113.2 MB/s eta 0:00:00
-Collecting astropy<8.0.0a0,>=6.1
-  Downloading astropy-6.1.7-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 141.8 MB/s eta 0:00:00
-Collecting pyyaml>=5.1
-  Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 KB 206.3 MB/s eta 0:00:00
-Collecting scipy~=1.10
-  Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 66.8 MB/s eta 0:00:00
-Collecting tables~=3.4
-  Downloading tables-3.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.6/7.6 MB 160.5 MB/s eta 0:00:00
-Collecting traitlets~=5.6
-  Downloading traitlets-5.14.3-py3-none-any.whl (85 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.4/85.4 KB 68.5 MB/s eta 0:00:00
-Collecting numpy<3.0.0a0,>=1.24
-  Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 166.1 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 29.4 MB/s eta 0:00:00
 Collecting requests
   Downloading requests-2.32.3-py3-none-any.whl (64 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 KB 54.6 MB/s eta 0:00:00
-Collecting scikit-learn!=1.4.0
-  Downloading scikit_learn-1.6.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.5 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.5/13.5 MB 149.5 MB/s eta 0:00:00
-Collecting psutil
-  Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (277 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.0/278.0 KB 153.5 MB/s eta 0:00:00
-Collecting tqdm>=4.32
-  Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 KB 59.0 MB/s eta 0:00:00
-Collecting docutils
-  Downloading docutils-0.21.2-py3-none-any.whl (587 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.4/587.4 KB 203.3 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 KB 53.2 MB/s eta 0:00:00
+Collecting pyyaml>=5.1
+  Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 KB 176.6 MB/s eta 0:00:00
 Collecting packaging
   Downloading packaging-25.0-py3-none-any.whl (66 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 KB 62.1 MB/s eta 0:00:00
-Collecting pyerfa>=2.0.1.1
-  Downloading pyerfa-2.0.1.5-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (738 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 738.7/738.7 KB 170.7 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 KB 52.6 MB/s eta 0:00:00
+Collecting astropy<8.0.0a0,>=6.1
+  Downloading astropy-6.1.7-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 142.5 MB/s eta 0:00:00
+Collecting scipy~=1.10
+  Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 65.1 MB/s eta 0:00:00
+Collecting psutil
+  Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (277 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.0/278.0 KB 142.7 MB/s eta 0:00:00
+Collecting tables~=3.4
+  Downloading tables-3.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.6/7.6 MB 114.9 MB/s eta 0:00:00
+Collecting numba>=0.57
+  Downloading numba-0.61.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 141.7 MB/s eta 0:00:00
+Collecting numpy<3.0.0a0,>=1.24
+  Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 84.6 MB/s eta 0:00:00
+Collecting joblib
+  Downloading joblib-1.5.1-py3-none-any.whl (307 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 307.7/307.7 KB 152.1 MB/s eta 0:00:00
+Collecting tqdm>=4.32
+  Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 KB 27.1 MB/s eta 0:00:00
+Collecting traitlets~=5.6
+  Downloading traitlets-5.14.3-py3-none-any.whl (85 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.4/85.4 KB 72.9 MB/s eta 0:00:00
+Collecting scikit-learn!=1.4.0
+  Downloading scikit_learn-1.6.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.5/13.5 MB 104.9 MB/s eta 0:00:00
+Collecting docutils
+  Downloading docutils-0.21.2-py3-none-any.whl (587 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.4/587.4 KB 165.7 MB/s eta 0:00:00
 Collecting astropy-iers-data>=0.2024.10.28.0.34.7
   Downloading astropy_iers_data-0.2025.6.2.0.38.23-py3-none-any.whl (2.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 144.2 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 225.9 MB/s eta 0:00:00
+Collecting pyerfa>=2.0.1.1
+  Downloading pyerfa-2.0.1.5-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (738 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 738.7/738.7 KB 213.0 MB/s eta 0:00:00
 Collecting llvmlite<0.45,>=0.44.0dev0
   Downloading llvmlite-0.44.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (42.4 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.4/42.4 MB 56.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.4/42.4 MB 50.7 MB/s eta 0:00:00
 Collecting threadpoolctl>=3.1.0
   Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
 Collecting blosc2>=2.3.0
   Downloading blosc2-3.3.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.4 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 163.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 127.5 MB/s eta 0:00:00
+Collecting numexpr>=2.6.2
+  Downloading numexpr-2.10.2-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (397 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 397.3/397.3 KB 179.8 MB/s eta 0:00:00
 Collecting typing-extensions>=4.4.0
   Downloading typing_extensions-4.13.2-py3-none-any.whl (45 kB)
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.8/45.8 KB 38.5 MB/s eta 0:00:00
-Collecting numexpr>=2.6.2
-  Downloading numexpr-2.10.2-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (397 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 397.3/397.3 KB 169.0 MB/s eta 0:00:00
 Collecting py-cpuinfo
   Downloading py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
-Collecting idna<4,>=2.5
-  Downloading idna-3.10-py3-none-any.whl (70 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.4/70.4 KB 61.7 MB/s eta 0:00:00
-Collecting certifi>=2017.4.17
-  Downloading certifi-2025.4.26-py3-none-any.whl (159 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.6/159.6 KB 92.9 MB/s eta 0:00:00
 Collecting urllib3<3,>=1.21.1
   Downloading urllib3-2.4.0-py3-none-any.whl (128 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.7/128.7 KB 98.3 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.7/128.7 KB 100.9 MB/s eta 0:00:00
 Collecting charset-normalizer<4,>=2
   Downloading charset_normalizer-3.4.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (149 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 149.5/149.5 KB 95.9 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 149.5/149.5 KB 106.1 MB/s eta 0:00:00
+Collecting certifi>=2017.4.17
+  Downloading certifi-2025.4.26-py3-none-any.whl (159 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.6/159.6 KB 118.4 MB/s eta 0:00:00
+Collecting idna<4,>=2.5
+  Downloading idna-3.10-py3-none-any.whl (70 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.4/70.4 KB 65.1 MB/s eta 0:00:00
 Collecting msgpack
   Downloading msgpack-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (378 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 378.0/378.0 KB 178.5 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 378.0/378.0 KB 144.9 MB/s eta 0:00:00
 Collecting ndindex
   Downloading ndindex-1.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (501 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 501.6/501.6 KB 204.7 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 501.6/501.6 KB 196.2 MB/s eta 0:00:00
 Collecting platformdirs
   Downloading platformdirs-4.3.8-py3-none-any.whl (18 kB)
 Installing collected packages: py-cpuinfo, urllib3, typing-extensions, traitlets, tqdm, threadpoolctl, pyyaml, psutil, platformdirs, packaging, numpy, ndindex, msgpack, llvmlite, joblib, idna, docutils, charset-normalizer, certifi, astropy-iers-data, scipy, requests, pyerfa, numexpr, numba, scikit-learn, blosc2, astropy, tables, ctapipe
 Successfully installed astropy-6.1.7 astropy-iers-data-0.2025.6.2.0.38.23 blosc2-3.3.4 certifi-2025.4.26 charset-normalizer-3.4.2 ctapipe-0.25.1 docutils-0.21.2 idna-3.10 joblib-1.5.1 llvmlite-0.44.0 msgpack-1.1.0 ndindex-1.10.0 numba-0.61.2 numexpr-2.10.2 numpy-2.2.6 packaging-25.0 platformdirs-4.3.8 psutil-7.0.0 py-cpuinfo-9.0.0 pyerfa-2.0.1.5 pyyaml-6.0.2 requests-2.32.3 scikit-learn-1.6.1 scipy-1.15.3 tables-3.10.1 threadpoolctl-3.6.0 tqdm-4.67.1 traitlets-5.14.3 typing-extensions-4.13.2 urllib3-2.4.0
 Collecting eventio
   Downloading eventio-1.15.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 29.4 MB/s eta 0:00:00
-Requirement already satisfied: numpy>=1.21 in /usr/local/lib/python3.10/dist-packages (from eventio) (2.2.6)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 29.1 MB/s eta 0:00:00
 Collecting zstandard>0.11.1
   Downloading zstandard-0.23.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.4 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 153.1 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 155.7 MB/s eta 0:00:00
 Collecting corsikaio<0.6.0,>=0.3.3
   Downloading corsikaio-0.5.0-py3-none-any.whl (15 kB)
+Requirement already satisfied: numpy>=1.21 in /usr/local/lib/python3.10/dist-packages (from eventio) (2.2.6)
 Installing collected packages: zstandard, corsikaio, eventio
 Successfully installed corsikaio-0.5.0 eventio-1.15.0 zstandard-0.23.0
 Collecting pandas
   Downloading pandas-2.2.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 176.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 163.2 MB/s eta 0:00:00
 Requirement already satisfied: numpy>=1.22.4 in /usr/local/lib/python3.10/dist-packages (from pandas) (2.2.6)
-Collecting tzdata>=2022.7
-  Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 KB 173.5 MB/s eta 0:00:00
-Collecting python-dateutil>=2.8.2
-  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 KB 148.8 MB/s eta 0:00:00
 Collecting pytz>=2020.1
   Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 KB 188.3 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 KB 181.2 MB/s eta 0:00:00
+Collecting tzdata>=2022.7
+  Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 KB 139.5 MB/s eta 0:00:00
+Collecting python-dateutil>=2.8.2
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 KB 132.1 MB/s eta 0:00:00
 Collecting six>=1.5
   Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
 Installing collected packages: pytz, tzdata, six, python-dateutil, pandas
 Successfully installed pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2025.2 six-1.17.0 tzdata-2025.2
 Collecting matplotlib
   Downloading matplotlib-3.10.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 19.1 MB/s eta 0:00:00
-Collecting pillow>=8
-  Downloading pillow-11.2.1-cp310-cp310-manylinux_2_28_x86_64.whl (4.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 53.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 86.0 MB/s eta 0:00:00
 Collecting pyparsing>=2.3.1
   Downloading pyparsing-3.2.3-py3-none-any.whl (111 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.1/111.1 KB 86.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.1/111.1 KB 85.7 MB/s eta 0:00:00
+Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (2.2.6)
 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (25.0)
-Collecting fonttools>=4.22.0
-  Downloading fonttools-4.58.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.8 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 63.6 MB/s eta 0:00:00
-Collecting kiwisolver>=1.3.1
-  Downloading kiwisolver-1.4.8-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 63.6 MB/s eta 0:00:00
 Collecting cycler>=0.10
   Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
-Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (2.2.6)
 Collecting contourpy>=1.0.1
   Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 325.0/325.0 KB 102.7 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 325.0/325.0 KB 144.5 MB/s eta 0:00:00
+Collecting pillow>=8
+  Downloading pillow-11.2.1-cp310-cp310-manylinux_2_28_x86_64.whl (4.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 191.5 MB/s eta 0:00:00
+Collecting kiwisolver>=1.3.1
+  Downloading kiwisolver-1.4.8-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 214.4 MB/s eta 0:00:00
 Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (2.9.0.post0)
+Collecting fonttools>=4.22.0
+  Downloading fonttools-4.58.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 238.7 MB/s eta 0:00:00
 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
 Installing collected packages: pyparsing, pillow, kiwisolver, fonttools, cycler, contourpy, matplotlib
 Successfully installed contourpy-1.3.2 cycler-0.12.1 fonttools-4.58.1 kiwisolver-1.4.8 matplotlib-3.10.3 pillow-11.2.1 pyparsing-3.2.3
