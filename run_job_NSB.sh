@@ -1,7 +1,7 @@
 #!/bin/bash -l
 #SBATCH --job-name simtel%j
-#SBATCH --error /srv/beegfs/scratch/users/b/burmistr/ctapipe/prod5/NSB_268MHz/proton/job_error/crgen_%j.error
-#SBATCH --output /srv/beegfs/scratch/users/b/burmistr/ctapipe/prod5/NSB_268MHz/proton/job_output/output_%j.output
+#SBATCH --error /srv/beegfs/scratch/users/b/burmistr/ctapipe/nsb/job_error/crgen_%j.error
+#SBATCH --output /srv/beegfs/scratch/users/b/burmistr/ctapipe/nsb/job_output/output_%j.output
 #SBATCH --ntasks 1
 #SBATCH --cpus-per-task 1
 #SBATCH --partition public-cpu
@@ -24,38 +24,26 @@ else
 	    jobID=$2
 	    nsbGHz=$3
 	    #
-	    _min_photoelectrons=0
-	    _nightsky_background=$nsbGHz
-	    maxtrgev=10000
-	    cfg_dir="/run_simtelarray/cfg/"
-	    #
-	    scratchDir="/srv/beegfs/scratch/users/b/burmistr/"
-	    inFilePref="/srv/beegfs/scratch/users/b/burmistr/corsika/forNSB/"
-	    outFilePref="/srv/beegfs/scratch/users/b/burmistr/sim_telarray/nsb/"
-	    #
-	    in_corsika_file="$inFilePref/dummy10000$jobID.corsika.gz"
-	    out_simtel_file="$outFilePref/data/corsika_dummy100000_"$nsbGHz"GHz.simtel.gz"
-	    out_hist_file="$outFilePref/hdata/corsika_dummy100000_"$nsbGHz"GHz.hdata"
-	    out_log_file="$outFilePref/log/corsika_dummy100000_"$nsbGHz"GHz.log"
-	    #
-            echo "inFilePref      $inFilePref"
-            echo "outFilePref     $outFilePref"
-	    echo "jobID           $jobID"
-	    echo "nsbGHz          $nsbGHz"
-	    echo "in_corsika_file $in_corsika_file"
-	    echo "out_simtel_file $out_simtel_file"
-	    echo "out_hist_file   $out_hist_file"
-	    echo "out_log_file    $out_log_file"
-	    #
-	    mkdir -p "$outFilePref/data/"
-	    mkdir -p "$outFilePref/hdata/"
-	    mkdir -p "$outFilePref/log/"
-	    #
-	    rm -rf $out_hist_file
-	    rm -rf $out_simtel_file
-	    rm -rf $out_log_file
-	    #
-	    srun singularity run -B ../run_simtelarray:/run_simtelarray -B $scratchDir:$scratchDir ../singularityalma.sif /sim_telarray/bin/sim_telarray -I$cfg_dir -c $cfg_dir/CTA-PROD5-LaPalma-baseline_4LSTs_MAGIC.cfg -C MAXIMUM_TRIGGERED_EVENTS=$maxtrgev -DNUM_TELESCOPES=1 -DNO_STEREO_TRIGGER=1 -C min_photons=0 -C min_photoelectrons=$_min_photoelectrons -C save_photons=3 -C only_triggered_telescopes=1 -C only_triggered_arrays=1 -C random_state=auto -C show=all -C maximum_telescopes=1 -C fadc_sum_bins=75 -C telescope_phi=180 -C telescope_zenith_angle=20 -C asum_threshold=8.25 -C trigger_current_limit=2000.0 -C nightsky_background=all:$_nightsky_background -C nsb_scaling_factor=1 -C dark_events=0 -C pedestal_events=0 -h $out_hist_file -o $out_simtel_file $in_corsika_file 2>&1 > $out_log_file
+            sif_file="./ctapipe.sif"
+            scratchDir="/srv/beegfs/scratch/users/b/burmistr/"
+            dataOIdir_sim_telarray_Preff=$scratchDir"/sim_telarray/nsb/data/"
+            dataOIdir_ctapipe_Preff=$scratchDir"/ctapipe/nsb/data/"
+            ctapipe_config="/ctapipe_dbscan_sim_process/configs/ctapipe_standard_sipm_config.json"
+            #
+            mkdir -p $dataOIdir_ctapipe_Preff
+            #
+            simtelIn=$dataOIdir_sim_telarray_Preff"/corsika_dummy100000_"$nsbGHz"GHz.simtel.gz"
+            dl1Out=$dataOIdir_ctapipe_Preff"/corsika_dummy100000_"$nsbGHz"GHz.r1.dl1.h5"
+            #
+            echo "sif_file                     = $sif_file"
+            echo "scratchDir                   = $scratchDir"
+            echo "dataOIdir_sim_telarray_Preff = $dataOIdir_sim_telarray_Preff"
+            echo "dataOIdir_ctapipe_Preff      = $dataOIdir_ctapipe_Preff"
+            echo "ctapipe_config               = $ctapipe_config"
+            echo "simtelIn                     = $simtelIn"
+            echo "dl1Out                       = $dl1Out"
+            #
+            srun singularity run -B $scratchDir:$scratchDir $sif_file ctapipe-process --overwrite --input=$simtelIn --output=$dl1Out --config=$ctapipe_config --write-images --write-parameters --no-write-showers --DataWriter.write_r1_waveforms=True
 	    #
         else
             printHelp       
