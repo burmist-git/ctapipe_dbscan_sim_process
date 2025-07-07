@@ -46,10 +46,10 @@ else
 	#
 	singularity run $out_sif_file ls /DBscan_on_simtel_data/
     elif [ "$1" = "--t_ctapipe_process" ]; then
-	scratchDir="/srv/beegfs/scratch/users/b/burmistr/"
+	scratchDir="../scratch/"
         dataOIdir_sim_telarray_Preff=$scratchDir"/sim_telarray/prod5/NSB_2MHz/proton/data/"
 	dataOIdir_ctapipe_Preff=$scratchDir"/ctapipe/prod5/NSB_2MHz/proton/data/"
-	ctapipe_config="/ctapipe_dbscan_sim_process/configs/ctapipe_standard_sipm_config.json"
+	ctapipe_config="./configs/ctapipe_standard_sipm_config.json"
 	#
 	mkdir -p $dataOIdir_ctapipe_Preff
         #
@@ -63,7 +63,7 @@ else
 	echo "simtelIn                     = $simtelIn"
 	echo "dl1Out                       = $dl1Out"
 	#
-	singularity run -B $scratchDir:$scratchDir $out_sif_file ctapipe-process --overwrite --input=$simtelIn --output=$dl1Out --config=$ctapipe_config --max-events=10 --write-images --write-parameters --no-write-showers --DataWriter.write_r1_waveforms=True
+	ctapipe-process --overwrite --input=$simtelIn --output=$dl1Out --config=$ctapipe_config --max-events=10 --write-images --write-parameters --no-write-showers --DataWriter.write_r1_waveforms=True
     elif [ "$1" = "--t_dbscan" ]; then
 	#
 	singularity run $out_sif_file ls /DBscan_on_simtel_data/
